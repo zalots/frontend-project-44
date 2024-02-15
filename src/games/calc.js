@@ -3,19 +3,19 @@ import readlineSync from 'readline-sync';
 const brainCalc = () => {
     console.log("brain-calc");
     console.log("Welcome to the Brain Games!");
-    var name = prompt("May I have your name?");
+    const name = readlineSync.question("May I have your name?");
     console.log("Hello, " + name + "!");
     console.log("What is the result of the expression?");
-    var correctAnswers = 0;
+    let correctAnswers = 0;
 
     while (correctAnswers < 3) {
-        var num1 = Math.floor(Math.random() * 100) + 1;
-        var num2 = Math.floor(Math.random() * 100) + 1;
-        var operator = ["+", "-", "*"][Math.floor(Math.random() * 3)];
-        var question = "Question: " + num1 + " " + operator + " " + num2;
-        var userAnswer = prompt(question + "\nYour answer:");
+        let num1 = Math.floor(Math.random() * 100) + 1;
+        let num2 = Math.floor(Math.random() * 100) + 1;
+        let operator = ["+", "-", "*"][Math.floor(Math.random() * 3)];
+        let question = "Question: " + num1 + " " + operator + " " + num2;
+        let userAnswer = readlineSync.question(question + "\nYour answer:");
 
-        var correctAnswer;
+        let correctAnswer;
         if (operator === "+") {
             correctAnswer = num1 + num2;
         } else if (operator === "-") {
@@ -30,13 +30,11 @@ const brainCalc = () => {
         } else {
             console.log("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
             console.log("Let's try again, " + name + "!");
-            return;
+            break;
         }
     }
 
     console.log("Congratulations, " + name + "!");
-}
+};
 
-brainCalc();
-
-export default {brainCalc};
+export default brainCalc;
