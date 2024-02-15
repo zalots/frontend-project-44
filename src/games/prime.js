@@ -1,5 +1,7 @@
 import readlineSync from 'readline-sync';
 
+import ultim from '../src/index.js';
+
 const isPrime = (number) => {
     if (number < 2) {
         return false;
@@ -13,11 +15,6 @@ const isPrime = (number) => {
 };
 
 const playGame = () => {
-    console.log('Welcome to the Brain Games!');
-    const playerName = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${playerName}!`);
-    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
     let correctAnswersCount = 0;
     const roundsCount = 3; 
 
