@@ -4,11 +4,6 @@ const isEven = (getRandomNumber) => {
   return getRandomNumber % 2 === 0;
 };
 
-const getRandomNumber = () => {
-  return Math.floor(Math.random() * 101);
-}
-
-
 export const b = () => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
