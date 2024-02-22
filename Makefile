@@ -9,3 +9,9 @@ publish:
 
 brain-even:
 	node bin/brain-even.js
+
+link:
+	npx eslint .
+
+link:
+	npx eslint --fix .
