@@ -29,9 +29,17 @@ const b = () => {
       console.log(`Let's try again!`);
       break;
     }
+
+
+  
   };
+  
+  console.log(`Congratulations, ${name}!`);
+
 
   return b;
+
+  
 };
 
 
