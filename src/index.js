@@ -8,6 +8,6 @@ console.log(`Hello, ${playerName}!`);
 
 const sentence = (str) => console.log(str);
 
-export const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
+const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
 
-export { start };
+export { start, getRandomNumber };

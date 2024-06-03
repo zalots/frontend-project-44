@@ -1,15 +1,13 @@
-if (userAnswer.toLowerCase() === 'yes' && isEven(randomNumber)) {
-    console.log('Correct!');
-    correctAnswers += 1;
-  } else if (userAnswer.toLowerCase() === 'no' && !isEven(randomNumber)) {
-    console.log('Correct!');
-    correctAnswers += 1;
-  } else {
-    console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${isEven(randomNumber) ? 'yes' : 'no'}'.`);
-    console.log(`Let's try again, ${name}!`);
-    return;
-  }
+import readlineSync from 'readline-sync';
 
+const start = () => {
+console.log('Welcome to the Brain Games!');
+const playerName = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${playerName}!`);
+};
 
-console.log(`Congratulations, ${name}!`);
+const sentence = (str) => console.log(str);
 
+const getRandomNumber = () => Math.floor(Math.random() * 100) + 1;
+
+export { start, getRandomNumber };

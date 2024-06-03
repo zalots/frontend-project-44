@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
+import { getRandomNumber } from '../index.js'
 
-const isEven = (getRandomNumber) => {
-  return getRandomNumber % 2 === 0;
+const isEven = (num) => {
+  return num % 2 === 0;
 };
 
 const b = () => {
@@ -34,4 +35,4 @@ const b = () => {
 };
 
 
-  export default {b};
+  export default b;
